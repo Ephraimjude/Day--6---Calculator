@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <div class="calculator-container">
+                <div class="input-box">
+                    <div class="input-area">
+                        <textarea id="numBox" placeholder="0" readonly></textarea>
+                    </div>
+                    <div class="input-bodmas">
+                        <button id="clear" onclick="clearDisplay()">C</button>
+                        <button id="posOrNeg" onclick="togglePlusMinus()">+/-</button>
+                    </div>
+                    <div class="input-button">
+                        <div class="button-row">
+                            <input type="button" class="number-button" value="1" onclick="appendToDisplay('1')">
+                            <input type="button" class="number-button" value="2" onclick="appendToDisplay('2')">
+                            <input type="button" class="number-button" value="3" onclick="appendToDisplay('3')">
+                            <input type="button" class="operator-button" value="+" onclick="handleOperatorClick('+')">
+                        </div>
+                        <div class="button-row">
+                            <input type="button" class="number-button" value="4" onclick="appendToDisplay('4')">
+                            <input type="button" class="number-button" value="5" onclick="appendToDisplay('5')">
+                            <input type="button" class="number-button" value="6" onclick="appendToDisplay('6')">
+                            <input type="button" class="operator-button" value="-" onclick="handleOperatorClick('-')">
+                        </div>
+                        <div class="button-row">
+                            <input type="button" class="number-button" value="7" onclick="appendToDisplay('7')">
+                            <input type="button" class="number-button" value="8" onclick="appendToDisplay('8')">
+                            <input type="button" class="number-button" value="9" onclick="appendToDisplay('9')">
+                            <input type="button" class="operator-button" value="*" onclick="handleOperatorClick('*')">
+                        </div>
+                        <div class="button-row">
+                            <input type="button" class="number-button" value="0" onclick="appendToDisplay('0')">
+                            <input type="button" class="number-button" value="." onclick="appendToDisplay('.')">
+                            <input type="button" class="operator-button" value="/" onclick="handleOperatorClick('/')">
+                            <input type="button" class="operator-button" value="=" onclick="evaluateExpression()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
