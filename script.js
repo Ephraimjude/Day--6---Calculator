@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
             currentInput = eval(currentInput);
             if (isFinite(currentInput)) {
-                currentInput = currentInput.toFixed(4); // Display up to 6 decimal places
+                currentInput = currentInput.toFixed(2); // Display up to 6 decimal places
             }
         } catch (error) {
             currentInput = "Error";
